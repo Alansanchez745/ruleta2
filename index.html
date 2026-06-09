@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juego de Batatas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>🍠 Juego de Batatas</h1>
+    <p class="subtitle">Tocá la ruleta para girarla</p>
+
+    <div class="wheel-container" id="wheelWrap">
+      <div class="pointer"></div>
+      <canvas id="wheel" width="340" height="340"></canvas>
+      <div class="center-btn" id="spinBtn">
+        <span>¡GIRAR!</span>
+      </div>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <span class="result-label">Resultado</span>
+      <span class="result-value" id="resultText">—</span>
+    </div>
+
+    <p class="hint">Hacé clic en la ruleta o en el botón verde   para girar</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

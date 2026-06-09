@@ -1,0 +1,137 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  background: #fdf6ee;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 2.5rem;
+}
+ 
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #3d1f00;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.01em;
+}
+ 
+.subtitle {
+  font-size: 14px;
+  color: #8a6040;
+  margin-bottom: 1.5rem;
+}
+ 
+.wheel-container {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  cursor: pointer;
+  user-select: none;
+}
+ 
+canvas {
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+ 
+.pointer {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 28px solid #c0392b;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  z-index: 20;
+  pointer-events: none;
+}
+ 
+.center-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #61d245;
+  border: 4px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.1s, background 0.1s;
+  z-index: 20;
+}
+ 
+.center-btn:hover {
+  background: #53be39;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+ 
+.center-btn:active {
+  transform: translate(-50%, -50%) scale(0.95);
+}
+ 
+.center-btn span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+}
+ 
+.result-box {
+  margin-top: 1.5rem;
+  min-height: 64px;
+  width: 340px;
+  background: #fff;
+  border: 1px solid #e8d5be;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+ 
+.result-label {
+  font-size: 12px;
+  color: #8a6040;
+  margin-bottom: 4px;
+}
+ 
+.result-value {
+  font-size: 18px;
+  font-weight: 500;
+  color: #3d1f00;
+  text-align: center;
+}
+ 
+.hint {
+  font-size: 12px;
+  color: #8a6040;
+  margin-top: 1rem;
+}
